@@ -28,39 +28,41 @@ def donate():
 
 @app.route('/submit_donation', methods=['POST'])
 def submit_donation():
-    return render_template('thanks.html')
+    firstName = request.form['firstName']
+    return render_template('thanks.html',firstName=firstName)
 
 @app.route('/submit_application', methods=['POST'])
 def submit_application():
-    return render_template('thanks.html')
+    firstName = request.form['firstName']
+    return render_template('thanks.html',firstName=firstName)
 
 @app.route('/api/projects')
 def projects():
     return """
-    {[
-        "id":1,"details":
-        {"image":"/static/project_1.jpg",
+    [
+        {"id":1,
+        "image":"/static/project_1.jpg",
         "title":"Rurigrow",
         "full_details":"This project based in Eastern Ruritania has been running for 12 years and is ideal for those who are new to tree planting and want to work on a project with well established practices.",
         "duration":"4 weeks"
         },
-        "id":2,"details":
-        {"image":"/static/project_2.jpg",
+        {"id":2,
+        "image":"/static/project_2.jpg",
         "title":"RuthTree",
-        "full_details":"This project based in Southern Ruthenia has been running for 6 years and is ideal for those who want to improve their western slavic language skills whilst digging holes"
+        "full_details":"This project based in Southern Ruthenia has been running for 6 years and is ideal for those who want to improve their western slavic language skills whilst digging holes",
         "duration":"2 weeks"
         },        
-        "id":3,"details":
-        {"image":"/static/project_3.jpg",
+        {"id":3,
+        "image":"/static/project_3.jpg",
         "title":"Make Silesia Green",
-        "full_details":"This project based in Western Silesia has been running for 3 years and is ideal for those who are keen on nocturnal wild boar encounters."
+        "full_details":"This project based in Western Silesia has been running for 3 years and is ideal for those who are keen on nocturnal wild boar encounters.",
         "duration":"2 months"
         }, 
-        "id":4,"details":
-        {"image":"/static/project_4.jpg",
+        {"id":4,
+        "image":"/static/project_4.jpg",
         "title":"Project Bukmore",
-        "full_details":"This project based in Northern Bukovena has been running for 12 weeks and is good for experiences tree huggers."
+        "full_details":"This project based in Northern Bukovena has been running for 12 weeks and is good for experiences tree huggers.",
         "duration":"1 day"
-        }, 
-    ]}
+        }
+    ]
     """

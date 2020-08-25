@@ -24,7 +24,7 @@
 
   </head>
 
-  <body>
+  <body onload="get_projects()">
 
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
@@ -73,7 +73,7 @@
                   <p class="card-text" id="project_details"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" href="/apply">Apply</button>
+                      <a class="btn btn-sm btn-outline-secondary" id="apply">Apply</a>
                     </div>
                     <small class="text-muted" id="duration"></small>
                   </div>
@@ -85,6 +85,7 @@
     </main>
 
     <footer class="text-muted">
+      <input type="hidden" id="id" value="{{id}}">
       <div class="container">
         <p class="float-right">
           <a href="#">Back to top</a>
@@ -99,5 +100,25 @@
     <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/holder.min.js"></script>
+    <script>
+      function get_projects(){
+        $.ajax({
+          url: "/api/projects",
+          success: function( result ) {
+            const obj = JSON.parse(result);
+            for(i=0;i<obj.length;i++){
+              item = obj[i];
+              console.log(item)
+              if(item.id.toString()==$("#id")[0].value){
+                $("#project_image")[0].src = item.image;
+                $('#project_details')[0].innerHTML = item.full_details;
+                $("#apply")[0].href = "/apply/" + item.id.toString();
+                $("#duration")[0].innerHTML = item.duration;
+              }
+            }       
+          }
+        });
+      }
+    </script>
   </body>
 </html>
