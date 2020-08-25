@@ -8,11 +8,15 @@ app = Flask(__name__)
 app.secret_key = b'sdvsdkdsfdaw4ttgsdvzdgwtasq242'
 
 @app.route('/')
-def root(token=None):
+def root():
+    return render_template('index.html')
+
+@app.route('/projects')
+def projects(token=None):
     session['one_time_tokens'] = ""
     token = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
     session['one_time_tokens'] = token
-    return render_template('index.html', token=token)
+    return render_template('projects.html', token=token)
 
 @app.route('/details/<id>')
 def details(id=None):
@@ -37,7 +41,7 @@ def submit_application():
     return render_template('thanks.html',firstName=firstName)
 
 @app.route('/api/projects')
-def projects():
+def api_projects():
     return """
     [
         {"id":1,
@@ -62,6 +66,18 @@ def projects():
         "image":"/static/project_4.jpg",
         "title":"Project Bukmore",
         "full_details":"This project based in Northern Bukovena has been running for 12 weeks and is good for experiences tree huggers.",
+        "duration":"10 days"
+        },
+        {"id":5,
+        "image":"/static/project_5.jpg",
+        "title":"Saraamaare",
+        "full_details":"This project based in on the Baltic Island of Saraamaare for 1 year and is for juniper enthusiasts.",
+        "duration":"1 week"
+        },
+        {"id":6,
+        "image":"/static/project_6.jpg",
+        "title":"Project friendly bombs",
+        "full_details":"This project based in Slough is only for the hardcore. Meet each day in the Wetherspoons car park.",
         "duration":"1 day"
         }
     ]

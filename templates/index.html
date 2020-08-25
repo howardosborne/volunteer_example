@@ -5,145 +5,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/static/favicon.ico">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Plant a Tree</title>
 
-    <title>Plant a tree</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.1//examples/album/">
-
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
     <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="https://getbootstrap.com/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .cover-container{
+        background: url("/static/tree-cover.jpg") no-repeat scroll 0px 100% / cover transparent;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
     <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/4.1//examples/album/album.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.5/examples/cover/cover.css" rel="stylesheet">
   </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand"></h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link" href="/donate">Donate</a>
+      </nav>
+    </div>
+  </header>
 
-  <body>
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Plant a Tree</h1>
+    <p class="lead">We like planting trees. Joint us</p>
+    <p class="lead">
+      <a href="/projects" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+  </main>
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Ever thought about joining in the effort to plant trees?</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Plant a tree</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+  <footer class="mastfoot mt-auto">
 
-    <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Current Active Projects</h1>
-          <p class="lead text-muted">Here's a list of the current tree planting projects.</p>
-          <p>
-            <a href="/donate" class="btn btn-secondary my-2">Donate</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/static/project_1.jpg">
-                <div class="card-body">
-                  <p class="card-text">This project based in Eastern Ruritania has been running for 12 years and is ideal for those who are new to tree planting and want to work on a project with well established practices.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a class="btn btn-sm btn-outline-secondary" href="/details/1">Details</a>
-                      <a class="btn btn-sm btn-outline-secondary" href="/apply/1">Apply</a>
-                    </div>
-                    <small class="text-muted">4 weeks</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="/static/project_4.jpg">
-              <div class="card-body">
-                <p class="card-text">This project based in Southern Ruthenia has been running for 6 years and is ideal for those who want to improve their western slavic language skills whilst digging holes</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a class="btn btn-sm btn-outline-secondary" href="/details/2">Details</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="/apply/2">Apply</a>
-                  </div>
-                  <small class="text-muted">1 month</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="/static/project_3.jpg">
-            <div class="card-body">
-              <p class="card-text">This project based in Western Silesia has been running for 3 years and is ideal for those who are keen on nocturnal wild boar encounters.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a class="btn btn-sm btn-outline-secondary" href="/details/3">Details</a>
-                  <a class="btn btn-sm btn-outline-secondary" href="/apply/3">Apply</a>
-                </div>
-                <small class="text-muted">1 week</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <img class="card-img-top" src="/static/project_2.jpg">
-          <div class="card-body">
-            <p class="card-text">This project based in Northern Bukovena has been running for 12 weeks and is only available to formally certified tree huggers.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a class="btn btn-sm btn-outline-secondary" href="/details/4">Details</a>
-                <a class="btn btn-sm btn-outline-secondary" href="/apply/4">Apply</a>
-              </div>
-              <small class="text-muted">1 day</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/holder.min.js"></script>
-  </body>
+  </footer>
+</div>
+</body>
 </html>

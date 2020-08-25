@@ -26,17 +26,17 @@
         <h2>Donate</h2>
         <p class="lead">Thanks for contributing to make the world more woody.</p>
       </div>
-      <div class="row">
-          <div class="col-md-6 mb-3">
-            <h4 class="mb-3">Amount</h4>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            <div class="invalid-feedback">
-              It has to be a valid amount...
-            </div>
-        </div>
-      </div>
-          <h4 class="mb-3">Billing address</h4>
+          <!--<h4 class="mb-3">Billing address</h4>-->
           <form class="needs-validation"  method="post" action="/submit_donation">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                  <label for="firstName">Amount</label>
+                  <input type="text" class="form-control" id="amount" name="amount" placeholder="" required>
+                  <div class="invalid-feedback">
+                  It has to be a valid amount...
+                  </div>
+            </div>
+          </div>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -81,9 +81,7 @@
               </div>
             </div>
             <div class="row">
-              <h4 class="mb-3">Payment</h4>
-
-              <div class="d-block my-3">
+                <div class="d-block my-3">
                 <div class="custom-control custom-radio">
                   <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
                   <label class="custom-control-label" for="credit">Credit card</label>
